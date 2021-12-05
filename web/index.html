@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="scaffolded-by" content="https://github.com/dart-lang/sdk">
+  <title>Skyfile Explorer</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.dart.js"></script>
+  <link rel="stylesheet" href="treeview.vanilla.css">
+</head>
+
+<body>
+
+  <script src="/assets/js/darkmode-js.min.js"></script>
+  <script>
+    function addDarkmodeWidget() {
+      const options = {
+        mixColor: '#fff', // default: '#fff'
+        backgroundColor: '#fff',  // default: '#fff'
+        buttonColorDark: '#100f2c',  // default: '#100f2c'
+        buttonColorLight: '#fff', // default: '#fff'
+        label: '🌓', // default: ''
+      }
+      document.querySelector('body').style.backgroundColor = 'white';
+      new Darkmode(options).showWidget();
+    }
+    window.addEventListener('load', addDarkmodeWidget);
+  </script>
+
+  <div id="center">
+    <input autofocus placeholder="Paste skylink..." id="mainInput">
+    <div class="card" id="tutorialCard" style="display: none; flex-direction: column;">
+      <h2>How to use the Skyfile Explorer</h2>
+      <p>
+        Enter any Skylink or HNS domain in the search bar.
+        This app then shows you if it is a resolver skylink, which
+        static skylink it resolves to and what files it contains.
+      </p>
+    </div>
+
+    <div class="card" id="hnsDomain" style="display: none;">
+      <h2>Resolver Skylink</h2>
+    </div>
+
+
+    <div class="card" id="reverseLookup" style="display: none;">
+      <h2>Resolver Skylink</h2>
+    </div>
+
+    <div class="card" id="resolverSkylink" style="display: none;">
+      <h2>Resolver Skylink</h2>
+    </div>
+
+    <div class="card" id="staticSkylink" style="display: none;">
+
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
